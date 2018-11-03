@@ -9,22 +9,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
 
-const helloWorld = Platform.select({
-  ios: 'Hello iOS World!',
-  android: 'Hello Android World!',
-});
-
-export default class App extends Component {
-  render() {
-    return (
-      <View style={ styles.container }>
-        <Text style={ styles.welcome }>React Native</Text>
-        <Text style={ styles.helloWorld }>{ helloWorld }</Text>
-      </View>
-    );
-  }
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -41,6 +25,38 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-    fontSize: 30,
+    fontSize: 32,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+    fontSize: 16,
   },
 });
+
+const helloWorld = Platform.select({
+  ios: 'iOS',
+  android: 'Android',
+});
+
+const instructions = Platform.select({
+  ios: `
+    Press Cmd+R to reload,
+    Cmd+D or shake for dev menu`,
+  android: `
+    Double tap R on your keyboard to reload,
+    Shake or press menu button for dev menu`,
+});
+
+export default class App extends Component {
+  render() {
+    return (
+      <View style={ styles.container }>
+        <Text style={ styles.welcome }>React Native</Text>
+        <Text style={ styles.helloWorld }>Hello { helloWorld } World</Text>
+        <Text style={ styles.instructions }>{ instructions }</Text>
+      </View>
+    );
+  }
+}
