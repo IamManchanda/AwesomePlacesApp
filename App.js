@@ -43,10 +43,10 @@ const helloWorld = Platform.select({
 const instructions = Platform.select({
   ios: `
     Press Cmd+R to reload,
-    Cmd+D or shake for dev menu`,
+    Cmd+D or Shake for dev menu`,
   android: `
     Double tap R on your keyboard to reload,
-    Shake or press menu button for dev menu`,
+    Cmd+M or Shake for dev menu`,
 });
 
 export default class App extends Component {
