@@ -8,8 +8,7 @@ export default class PrototypalComponent extends Component {
   render () {
     const {  } = this.props; // Props
     const {  } = this.state; // Data
-    const {  } = this; // Methods
-    const {  } = this; // Computed
+    const {  } = this; // Methods & Computed
 
     return (
       <Fragment>

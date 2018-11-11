@@ -7,20 +7,6 @@ export default StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
   },
-  inputContainer: {
-    width: '100%',
-    paddingLeft: 10,
-    paddingRight: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  placeInput: {
-    width: '70%',
-  },
-  placeButton: {
-    width: '30%',
-  },
   listContainer: {
     width: '100%',
   },

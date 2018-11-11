@@ -5,7 +5,7 @@ import styles from './stylesListItem';
 export default ({ placeName }) => (
   <Fragment>
     <View style={ styles.listItem }>
-      <Text>Hello, { placeName }</Text>
+      <Text>{ placeName }</Text>
     </View>
   </Fragment>
 );
