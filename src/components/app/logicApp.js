@@ -1,8 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import { View, TextInput, Button } from 'react-native';
-import styles from './styles';
+import styles from './stylesApp';
 
-import ListItem from '../shared/list-item/ListItem';
+import ListItem from '../shared/list-item/logicListItem';
 
 export default class App extends Component {
   state = {
