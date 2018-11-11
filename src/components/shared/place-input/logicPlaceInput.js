@@ -18,6 +18,9 @@ export default class PlaceInput extends Component {
     const { placeName } = this.state;
     if (placeName.trim() === '') return undefined;
     this.props.placeAddedHandler(placeName);
+    this.setState({ 
+      placeName: '', 
+    });
   };
 
   render () {
