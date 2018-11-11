@@ -1,6 +1,8 @@
 import React, { Fragment, Component } from 'react';
-import { StyleSheet, View, TextInput, Button } from 'react-native';
-import ListItem from './src/components/ListItem/ListItem';
+import { View, TextInput, Button } from 'react-native';
+import styles from './styles';
+
+import ListItem from '../shared/list-item/ListItem';
 
 export default class App extends Component {
   state = {
@@ -57,29 +59,3 @@ export default class App extends Component {
     );
   }
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    paddingTop: 40,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-  },
-  inputContainer: {
-    width: '100%',
-    paddingLeft: 10,
-    paddingRight: 10,
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-  },
-  placeInput: {
-    width: '70%',
-  },
-  placeButton: {
-    width: '30%',
-  },
-  listContainer: {
-    width: '100%',
-  },
-});
