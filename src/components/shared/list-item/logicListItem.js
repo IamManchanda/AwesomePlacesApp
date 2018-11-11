@@ -1,11 +1,15 @@
 import React, { Fragment } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity, TouchableNativeFeedback } from 'react-native';
 import styles from './stylesListItem';
 
-export default ({ placeName }) => (
+// TODO: Implement `<TouchableNativeFeedback />` for android instead of `<TouchableOpacity />`
+
+export default ({ placeName, placeId, pressedItemHandler }) => (
   <Fragment>
-    <View style={ styles.listItem }>
-      <Text>{ placeName }</Text>
-    </View>
+    <TouchableOpacity onPress={ pressedItemHandler }>
+      <View style={ styles.listItem }>
+        <Text>{ placeId }. { placeName }</Text>
+      </View>
+    </TouchableOpacity>
   </Fragment>
 );

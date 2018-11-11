@@ -21,7 +21,7 @@ export default class App extends Component {
   get renderPlacesOutput() {
     return this.state.places.map((place, index) => (
       <Fragment key={ index }>
-        <ListItem placeName={ place } />
+        <ListItem placeName={ place } placeId={index  + 1} pressedItemHandler={ () => alert(`Welcome to #${index + 1} ${place}`) } />
       </Fragment>
     ));
   }
